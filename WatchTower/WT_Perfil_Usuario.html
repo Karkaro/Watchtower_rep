@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title> WatchTower </title>
+        <link rel="icon" type="image/x-icon" href="Logo_Favicon.png">
+        <link rel="stylesheet" href="WT_Perfil_Usuario.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <script>
+            function MensajeInicio(){
+                alert("Datos Actualizados")
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img src="Logo.png" alt="" class="logo"><span>WatchTower</span></a>
+            
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Nuevo</a></li>
+                <li><a href="#">Publicar</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+            <div class="main">
+                <a href="#" class="User"><i class="ri-user-shared-line"></i>Iniciar Sesion</a>
+                <a href="#"><i class="ri-file-text-line"></i>Registrarse</a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="title"> Usuario </div>
+                    <div class="wrapper">
+                        <div class="profile_img">
+                            <img src="Kenny.jpg" alt="user" width="100">
+                        </div>
+                        <div class="lef">
+                            <div class="User-info"> Karkaro </div>
+                            <div class="User-info"> Kenny Carrizales </div>
+                            <div class="User-info"> Kenny_Carrizales@hotmail.com</div>
+                            <div class="User-info"> 23</div>
+                        </div>
+                    </div>
+                    <div class="title"> Actualizar Datos </div>
+                    <form action="#" id="form">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details"> Nombre(s) </span>
+                                <input type="text" placeholder="Nombre" required id="Nombres" oninvalid="this.setCustomValidity('El nombre solo puede contener letras')"
+                                pattern="[0-9]*">
+                                <title class="textdetails">Solo letras del alfabeto español</title>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details"> Apellidos </span> 
+                                <input type="text" placeholder="Apellidos" oninvalid="this.setCustomValidity('Los Apellidos solo pueden contener letras')"
+                                pattern="[0-9]*">
+                                <title class="textdetails"> Solo letras del alfabeto español </title>
+                            </div>
+                                        
+                            <div class="input-box">
+                                <span class="details"> Fecha de Nacimiento </span>
+                                <input type="date" min="1940-02-27" max="2005-02-27" placeholder="ingrese su Edad" required id="Fecha_Nacimiento">
+                                <title class="textdetails">Debe ser mayor de 18 años</title>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details"> Imagen de Perfil </span>
+                                <input type="file" name="Image" accept="image/png, image/gif, image/jpeg" required id="Imagen">
+                                <title class="textdetails">Solo archivos .png, .jpeg y .gif</title>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details"> Correo </span>
+                                <input type="email" placeholder="E-mail" required id="Correo" oninvalid="this.setCustomValidity('dirección de correo no válida')"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                <title class="textdetails">Debe incluir una dirección de correo valida (@ y .)</title>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details"> Contraseña </span>
+                                <input type="password" minlength="8" placeholder="Ingrese Su Contraseña" oninvalid="this.setCustomValidity('Contraseña Invalida, Intente Nuevamente')"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*\d)(?=.*[,./;'!@#$%^&*_+-=ñÑ].{8,}">
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details"> Confirme Contraseña </span>
+                                <input type="password" minlength="8" placeholder="Confirme su Contraseña" required id="Confirme_Contrasena" oninvalid="this.setCustomValidity('Debe coincidir con la contraseña')"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*\d)(?=.*[,./;'!@#$%^&*_+-=ñÑ].{8,}">
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Actualizar" onclick="MensajeInicio()">
+                        </div>
+                    </form>
+            </div>
+        </main>
+        <footer>
+                                             
+            <span class="copyright">&copy;2023, WatchTower, Todos los derechos reservados.</span>  
+        </footer>
+    </body>
+</html>
